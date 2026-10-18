@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff0f5">
+<title>A Little Surprise for Pragitha 💗</title>
+<style>
+:root{--pink:#f5a9c8;--rose:#e86f9a;--plum:#70445f;--ink:#493746;--cream:#fff9f7;--lav:#f2edff;--gold:#f4c86a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 15%,#ffe1ec 0,transparent 32%),radial-gradient(circle at 90% 85%,#e9e3ff 0,transparent 35%),linear-gradient(135deg,#fff8f8,#fff7ed);overflow-x:hidden}
+button{font:inherit;cursor:pointer;border:0;touch-action:manipulation}
+button:focus-visible{outline:3px solid #9b5d9a;outline-offset:3px}
+#sparkles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floaty{position:absolute;bottom:-40px;opacity:.5;animation:rise linear infinite;font-size:20px}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.topbar{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:980px;margin:auto;padding:15px 18px}
+.brand{font-weight:800;letter-spacing:.2px;color:var(--plum)}
+.music{background:#fff9;border:1px solid #edcbd8;border-radius:999px;padding:9px 13px;color:var(--plum);font-size:.88rem}
+main{position:relative;z-index:1;padding:8px 14px 34px}
+.screen{display:none;max-width:760px;min-height:72vh;margin:0 auto;align-items:center;justify-content:center;flex-direction:column;text-align:center;animation:appear .5s ease both}
+.screen.active{display:flex}
+@keyframes appear{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:none}}
+.pill{display:inline-block;border-radius:999px;background:#fff9;padding:7px 13px;border:1px solid #f1d5e0;font-size:.82rem;color:#8d5475;margin-bottom:12px}
+h1,h2,p{margin-top:0}
+h1{font-size:clamp(2.05rem,7vw,4rem);line-height:1.06;margin-bottom:14px;color:#75445f}
+h2{font-size:clamp(1.55rem,5vw,2.5rem);line-height:1.15;color:#75445f;margin-bottom:12px}
+p{font-size:clamp(1rem,2.8vw,1.12rem);line-height:1.65;max-width:610px}
+.sub{color:#8c687d}
+.card{width:min(100%,620px);padding:clamp(20px,5vw,34px);background:#ffffffb8;border:1px solid #fff;box-shadow:0 18px 55px #8b54751a;border-radius:28px;backdrop-filter:blur(8px)}
+.btnrow{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:18px}
+.btn{padding:13px 20px;border-radius:999px;background:linear-gradient(135deg,#ee8db2,#e76f9b);color:white;font-weight:800;box-shadow:0 8px 20px #e77ba32e;transition:transform .18s,box-shadow .18s;min-height:46px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px #e77ba34a}
+.btn.secondary{background:#fff;color:#87516f;border:1px solid #eccbd9;box-shadow:none}
+.btn.soft{background:linear-gradient(135deg,#b6a4ed,#9b8ad8)}
+.photo{width:min(100%,285px);max-height:340px;object-fit:cover;border-radius:22px;border:7px solid white;box-shadow:0 14px 35px #5b30432b;animation:photoFloat 5s ease-in-out infinite;display:block;margin:0 auto 18px}
+.photo.tilt{transform:rotate(-2deg);animation:photoFloat 5s ease-in-out infinite}
+.photo.wide{width:min(100%,330px);max-height:420px}
+@keyframes photoFloat{0%,100%{translate:0 0;rotate:-1deg}50%{translate:0 -7px;rotate:1deg}}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center;margin:18px 0}
+.photo-grid .photo{width:100%;height:190px;object-fit:cover;border-width:5px;margin:0}
+.photo-grid .photo:nth-child(2){transform:translateY(-8px) rotate(2deg)}
+.heart{font-size:2.7rem;display:inline-block;animation:beat 1.25s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.letter{text-align:left;white-space:normal;background:#fff9fb;border:1px solid #f5dce6;padding:20px;border-radius:18px;line-height:1.8}
+.progress{display:flex;gap:6px;justify-content:center;margin:0 auto 20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#e7cad7}.dot.on{background:#d96793;width:22px;border-radius:10px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:min(100%,480px);margin:12px auto}
+.choice{background:#fff;border:1px solid #efd5e1;border-radius:18px;padding:15px 10px;color:#77506a;font-weight:700;min-height:58px}
+.choice.selected{background:#ffe2ed;border-color:#df79a1;box-shadow:0 0 0 2px #f8c3d7}
+#starfield{height:180px;position:relative;max-width:420px;width:100%;margin:10px auto;background:linear-gradient(135deg,#312e59,#655184);border-radius:22px;overflow:hidden;touch-action:manipulation}
+.star{position:absolute;font-size:25px;cursor:pointer;user-select:none;filter:drop-shadow(0 0 8px #fff4a6);animation:twinkle 1.4s ease-in-out infinite alternate}
+@keyframes twinkle{to{transform:scale(1.22);filter:drop-shadow(0 0 13px #fff)}}
+.hug-wrap{font-size:5rem;animation:hug 2s ease-in-out infinite}
+@keyframes hug{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.08) rotate(3deg)}}
+.note{font-size:.88rem;color:#94788b}
+footer{position:relative;z-index:1;text-align:center;padding:0 15px 22px;color:#a17e93;font-size:.8rem}
+@media(max-width:520px){.topbar{padding:12px}.photo-grid{gap:7px}.photo-grid .photo{height:145px;border-width:4px;border-radius:14px}.card{border-radius:23px}.screen{min-height:70vh}.btn{padding:12px 17px}.photo.wide{max-height:360px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="sparkles" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="brand">a tiny corner of the universe 💗</div>
+  <button class="music" id="musicBtn" aria-label="Play or pause background music">♫ Play melody</button>
+</header>
+<audio id="bgMusic" src="soft-melody.mp3" loop preload="none"></audio>
+<main>
+  <div class="progress" id="progress" aria-label="Surprise progress"></div>
+
+  <section class="screen active" data-screen="0">
+    <div class="card">
+      <span class="pill">a little surprise, made just for you</span>
+      <div class="heart" aria-hidden="true">💗</div>
+      <h1>Hey, Pragitha ✨</h1>
+      <p class="sub">Even from far away, some people have a way of making an ordinary day feel a little more special.</p>
+      <button class="btn" onclick="go(1)">Open your surprise 💌</button>
+      <p class="note" style="margin:16px auto 0">Take your time. There’s no rush. 🌷</p>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="1">
+    <div class="card">
+      <span class="pill">little moments, little memories</span>
+      <h2>A few things worth smiling about 🌸</h2>
+      <div class="photo-grid">
+        <img class="photo" src="images/pragitha1.png" alt="Pragitha in a dark outfit, looking thoughtfully to the side" loading="lazy">
+        <img class="photo" src="images/pragitha2.jpg" alt="Pragitha smiling in a dark traditional outfit" loading="lazy">
+        <img class="photo" src="images/pragitha3.jpg" alt="Pragitha wearing a light blue saree" loading="lazy">
+      </div>
+      <p>Not every lovely thing needs a big explanation. Sometimes a smile is enough to make a moment stay. 💕</p>
+      <div class="btnrow"><button class="btn secondary" onclick="go(0)">Back</button><button class="btn" onclick="go(2)">Keep going →</button></div>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="2">
+    <div class="card">
+      <span class="pill">a small note from me</span>
+      <h2>Something I wanted to say 💌</h2>
+      <div class="letter">
+        Hey Pragitha,<br><br>
+        I wanted to make you something a little different—not because words are difficult, but because some feelings deserve a tiny bit of effort. Even when there’s distance between two people, a thoughtful message can still bring them a little closer.<br><br>
+        I hope this little page gives you a reason to smile today. You don’t have to say anything special back; I just wanted you to know that you’re appreciated. 🌷
+        <br><br>— with a smile, always 💗
+      </div>
+      <div class="btnrow"><button class="btn secondary" onclick="go(1)">Back</button><button class="btn" onclick="go(3)">Next surprise →</button></div>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="3">
+    <div class="card">
+      <span class="pill">tiny mood check</span>
+      <h2>How’s your heart today? ☁️</h2>
+      <p class="sub">Pick the closest one. No wrong answers.</p>
+      <div class="choices" id="moods">
+        <button class="choice" onclick="selectChoice(this,'mood')">😊 Happy-ish</button>
+        <button class="choice" onclick="selectChoice(this,'mood')">😴 Sleepy</button>
+        <button class="choice" onclick="selectChoice(this,'mood')">🥹 A little emotional</button>
+        <button class="choice" onclick="selectChoice(this,'mood')">🌧️ Need a hug</button>
+      </div>
+      <p id="moodReply" class="sub" aria-live="polite">Choose one and I’ll send a tiny message.</p>
+      <div class="btnrow"><button class="btn secondary" onclick="go(2)">Back</button><button class="btn" onclick="go(4)">Continue →</button></div>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="4">
+    <div class="card">
+      <span class="pill">a very important quiz 😌</span>
+      <h2>Choose the correct answer…</h2>
+      <p>What should every long-distance day include?</p>
+      <div class="choices" id="quiz">
+        <button class="choice" onclick="quizAnswer(this,false)">More worries 😵‍💫</button>
+        <button class="choice" onclick="quizAnswer(this,true)">A little kindness 💗</button>
+        <button class="choice" onclick="quizAnswer(this,false)">100 extra tasks 📚</button>
+        <button class="choice" onclick="quizAnswer(this,false)">A phone at 1% 🔋</button>
+      </div>
+      <p id="quizReply" class="sub" aria-live="polite">Choose wisely, madam quiz champion. 😄</p>
+      <div class="btnrow"><button class="btn secondary" onclick="go(3)">Back</button><button class="btn" onclick="go(5)">Next →</button></div>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="5">
+    <div class="card">
+      <span class="pill">collect a little sparkle ✨</span>
+      <h2>Catch 5 stars for a wish 🌟</h2>
+      <p>Tap the stars as they appear. A tiny mission, just for you.</p>
+      <div id="starfield" aria-label="Tap stars to collect them"></div>
+      <p><strong id="starCount">Stars collected: 0 / 5</strong></p>
+      <p id="starReply" class="sub" aria-live="polite">Your wish is waiting…</p>
+      <div class="btnrow"><button class="btn secondary" onclick="go(4)">Back</button><button class="btn" onclick="go(6)">I’m ready for a hug →</button></div>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="6">
+    <div class="card">
+      <span class="pill">sending across the distance</span>
+      <h2>Virtual hug delivery 🤗</h2>
+      <div class="hug-wrap" aria-label="Animated virtual hug">🫂</div>
+      <p>Imagine a warm, safe hug that says: “You’re doing better than you think. Take a breath. You’ve got this.”</p>
+      <button class="btn soft" onclick="hugMe()">Tap to receive hug 💞</button>
+      <p id="hugReply" class="sub" aria-live="polite">Delivery status: waiting for your tap…</p>
+      <div class="btnrow"><button class="btn secondary" onclick="go(5)">Back</button><button class="btn" onclick="go(7)">One last thing… →</button></div>
+    </div>
+  </section>
+
+  <section class="screen" data-screen="7">
+    <div class="card">
+      <span class="pill">the last little page</span>
+      <h2>For you, Pragitha 💖</h2>
+      <img class="photo wide tilt" src="images/pragitha3.jpg" alt="Pragitha smiling in a light blue saree" loading="lazy">
+      <div class="letter">
+        If today has been wonderful, I hope it gets even better. If today has been difficult, I hope something kind finds its way to you.<br><br>
+        And if this little surprise made you smile even for a second, then it did exactly what I hoped it would. Distance can make plans harder, but it doesn’t stop a thoughtful moment from reaching someone.<br><br>
+        Keep smiling in your own way, at your own pace. You deserve gentle days, genuine laughter, and people who treat your heart with care. 🌷
+        <br><br><strong>Sending you a little sunshine and one more virtual hug. ☀️🫂</strong>
+      </div>
+      <div class="heart" aria-hidden="true">💗</div>
+      <p class="sub">That’s the whole surprise. No pressure, just a little warmth from me to you.</p>
+      <div class="btnrow"><button class="btn secondary" onclick="go(0)">Replay from the start ↺</button><button class="btn" onclick="finalConfetti()">One last sparkle ✨</button></div>
+      <p id="finalReply" class="sub" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<footer>Made with care, a few stars, and a little extra thought. 💗</footer>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+const progress=document.getElementById('progress');
+let current=0, stars=0, starTimer=null;
+function buildProgress(){progress.innerHTML='';screens.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===current?' on':'');progress.appendChild(d)})}
+function go(n){current=Math.max(0,Math.min(7,n));screens.forEach((s,i)=>s.classList.toggle('active',i===current));buildProgress();window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});if(current===5)startStars()}
+buildProgress();
+function selectChoice(btn,type){btn.parentElement.querySelectorAll('.choice').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');const replies=['Then I hope your happiness keeps multiplying. ✨','A soft reminder: rest is productive too. ☁️','Sending a little gentleness your way. 💗','Consider this your pocket-sized hug. 🫂'];const i=[...btn.parentElement.children].indexOf(btn);document.getElementById('moodReply').textContent=replies[i]}
+function quizAnswer(btn,correct){btn.parentElement.querySelectorAll('.choice').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('quizReply').textContent=correct?'Correct! Full marks for your beautiful brain. 💗':'Hmm, try again, quiz champion 😄'}
+function startStars(){if(stars>=5)return;const field=document.getElementById('starfield');if(field.dataset.ready)return;field.dataset.ready='1';spawnStar();starTimer=setInterval(spawnStar,850)}
+function spawnStar(){if(stars>=5){clearInterval(starTimer);return}const field=document.getElementById('starfield');if(field.querySelectorAll('.star').length>=4)return;const s=document.createElement('button');s.className='star';s.type='button';s.textContent='⭐';s.setAttribute('aria-label','Collect star');s.style.left=(5+Math.random()*83)+'%';s.style.top=(8+Math.random()*68)+'%';s.onclick=()=>{if(s.dataset.hit)return;s.dataset.hit='1';s.remove();stars++;document.getElementById('starCount').textContent=`Stars collected: ${stars} / 5`;document.getElementById('starReply').textContent=stars>=5?'Wish unlocked: may a lovely little moment find you today. 🌠':'Nice catch! '+(5-stars)+' more to go ✨';if(stars>=5){clearInterval(starTimer);field.innerHTML='<div style="color:#fff;text-align:center;padding:55px 8px;font-size:1.15rem">Wish unlocked 🌠💗</div>'}};field.appendChild(s)}
+function hugMe(){document.getElementById('hugReply').textContent='Hug delivered successfully! 🤗💗 Please keep it as long as you need.';document.querySelector('.hug-wrap').textContent='🤗💖'}
+function finalConfetti(){const box=document.getElementById('sparkles');for(let i=0;i<24;i++){const e=document.createElement('span');e.className='floaty';e.textContent=['💗','✨','🌸','⭐'][Math.floor(Math.random()*4)];e.style.left=Math.random()*100+'%';e.style.animationDuration=(3+Math.random()*3)+'s';box.appendChild(e);setTimeout(()=>e.remove(),6500)}document.getElementById('finalReply').textContent='A final little sparkle, just for you. ✨'}
+const sparkles=document.getElementById('sparkles');for(let i=0;i<15;i++){const e=document.createElement('span');e.className='floaty';e.textContent=['♡','✦','♥','✧'][i%4];e.style.left=Math.random()*100+'%';e.style.animationDuration=(8+Math.random()*12)+'s';e.style.animationDelay=(-Math.random()*15)+'s';e.style.fontSize=(12+Math.random()*15)+'px';sparkles.appendChild(e)}
+const music=document.getElementById('bgMusic'),musicBtn=document.getElementById('musicBtn');let musicOn=false;
+musicBtn.addEventListener('click',async()=>{if(!musicOn){try{await music.play();musicOn=true;musicBtn.textContent='Ⅱ Pause melody'}catch(e){musicBtn.textContent='♫ Add soft-melody.mp3';return}}else{music.pause();musicOn=false;musicBtn.textContent='♫ Play melody'}});
+music.addEventListener('error',()=>{musicBtn.title='Add a properly licensed soft-melody.mp3 file beside index.html to enable music.'});
+</script>
+</body>
+</html>
